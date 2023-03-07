@@ -1,0 +1,35 @@
+{
+  "name": "ts-base-project",
+  "version": "0.0.1",
+  "description": "A template for building a library with ts",
+  "author": "kealjones@gmail.com",
+  "license": "MIT",
+  "url": "https://github.com/KealJones/ts-base-project",
+  "scripts": {
+    "build:dev": "tsup --watch",
+    "build:prod": "env NODE_ENV=production tsup",
+    "build:watch": "tsup --watch",
+    "lint:fix": "eslint ./src --ext .ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "dprint fmt",
+    "lint": "yarn lint:format && yarn lint:fix "
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "dprint": "^0.34.5",
+    "eslint": "^8.16.0",
+    "eslint-plugin-dprint": "^0.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "tsup": "^6.0.1",
+    "typescript": "^4.7.2"
+  },
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "typeings": "lib/index.d.ts",
+  "type": "module",
+  "files": [
+    "lib",
+    "dist"
+  ]
+}
